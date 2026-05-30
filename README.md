@@ -73,6 +73,17 @@ TESS_TOI_preprocessing_package/
 - `processed/preprocessing_summary.json`：机器可读的处理摘要。
 - `processed/priority_outputs/`：包含打分后的候选表、Top20 输出、CV 指标与可视化图像。
 
+### 输出表格说明（详细）
+
+- `processed/priority_outputs/candidates_with_scores.csv`：对所有 PC/APC 候选的完整打分表。包含原始特征、`planet_probability`（模型概率）、`science_interest`、`priority_score`（或 `priority_score_calc`，最终惩罚后分数）及 `missing_feature_count` 等。通常按 `priority_score` 降序筛选观测目标。
+
+- `processed/priority_outputs/top20_priority.csv`：按最终优先级（惩罚后分数）选出的前 20 名候选，用于直接生成观测清单。包含标识字段、`planet_probability`、`priority_score` 及关键观测参数。
+
+- `processed/priority_outputs/top20_breakdown.csv`：Top20 的分解表（由 `analyze_priority.py` 生成），每一行包含分项贡献：`contrib_planet`、`contrib_science`、`contrib_brightness`、`contrib_period`，以及 `missing_penalty`、`priority_score_before_penalty`（惩罚前分数）与 `priority_score_calc`（惩罚后分数）。适合用于可视化和分析惩罚影响。
+
+- `processed/priority_outputs/top20_high_risk.csv`：模型认为概率最低的 20 个候选（按 `planet_probability` 升序），用于人工复核可能的误报或数据缺失问题，通常会包含 `missing_feature_names` 以便快速定位问题字段。
+
+
 ## 4. 模型与优先级评分（实现要点）
 
 - 使用特征：`pl_orbper, pl_rade, st_tmag, st_teff, st_rad, missing_feature_count`。
