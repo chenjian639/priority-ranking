@@ -132,4 +132,13 @@ python code/compute_priority.py
 ---
 
 
+**图表解读**
+
+- **校准曲线（Calibration curve）**: 见 [processed/priority_outputs/calibration_curve.png](processed/priority_outputs/calibration_curve.png)。曲线总体靠近对角线，说明模型输出的 `planet_probability` 与观测到的正类频率相对一致；在极低概率区间略显保守（预测概率稍高于观测频率），在中等概率区间存在小幅偏差。总体校准可接受，但若需要严格概率解释（例如用于贝叶斯决策或阈值敏感的调度），建议在部署前使用 `CalibratedClassifierCV` 或 Isotonic/Platt 标定进行微调。
+
+- **半径 vs 入射通量散点（Radius vs Insolation）**: 见 [processed/priority_outputs/radius_insolation_scatter.png](processed/priority_outputs/radius_insolation_scatter.png)。横轴为行星半径（R_earth，对数尺度），纵轴为入射通量（Earth flux，对数尺度），点颜色表示 `planet_probability`。图中高概率（黄色）点集中在小到中等半径且入射通量为弱到中等值的区域，说明模型倾向于把较接近地球半径且入射通量适中的候选判为更可能是真行星；超大半径或极端入射通量的样本概率普遍较低。这与训练样本中类地/小型候选更具典型特征一致，也支持 `science_interest` 将地球相似性作为加分项的设计决策。
+
+- **Top20 权重分解（Top20 contributions）**: 见 [processed/priority_outputs/top20_contributions.png](processed/priority_outputs/top20_contributions.png)。堆积条形图展示了前 20 名候选的 `priority_score` 分解：蓝色（`planet_probability`）为主导贡献，橙色为 `science_interest`，绿色为 `brightness`，红色为 `period`；红点表示合成前的分数（未减去缺失惩罚）。结论：优先级主要由模型概率驱动（即置信度高的候选优先），`science_interest` 经常是次要但稳定的加分来源，`brightness` 和 `period` 提供辅助调整。若希望提升科学价值导向，可在 `code/compute_priority.py` 中提高 `science_interest` 的系数，并重新运行管线以观察排序变化。
+
+
 

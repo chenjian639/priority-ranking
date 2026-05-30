@@ -169,7 +169,9 @@ def main():
     cand['contrib_period'] = short_period_norm * w['period']
     max_missing = feature_ranges.get('max_missing',5)
     cand['missing_penalty'] = 0.05 * (missing / max_missing)
-    cand['priority_score_calc'] = cand['contrib_planet'] + cand['contrib_science'] + cand['contrib_brightness'] + cand['contrib_period'] - cand['missing_penalty']
+    # compute pre-penalty and post-penalty scores
+    cand['priority_score_before_penalty'] = cand['contrib_planet'] + cand['contrib_science'] + cand['contrib_brightness'] + cand['contrib_period']
+    cand['priority_score_calc'] = cand['priority_score_before_penalty'] - cand['missing_penalty']
     cand['priority_score_calc'] = np.clip(cand['priority_score_calc'], 0.0, 1.0)
 
     top20 = cand.sort_values('priority_score_calc', ascending=False).head(20).copy()
@@ -183,8 +185,8 @@ def main():
     p2 = plt.bar(inds, top20['contrib_science'], bottom=top20['contrib_planet'], label='science_interest')
     p3 = plt.bar(inds, top20['contrib_brightness'], bottom=top20['contrib_planet']+top20['contrib_science'], label='brightness')
     p4 = plt.bar(inds, top20['contrib_period'], bottom=top20['contrib_planet']+top20['contrib_science']+top20['contrib_brightness'], label='period')
-    # subtract penalty as red marker
-    plt.scatter(inds, top20['priority_score_calc'] - top20['missing_penalty'], color='red', zorder=5, label='score (before penalty)')
+    # plot pre-penalty score as red marker (true "before penalty")
+    plt.scatter(inds, top20['priority_score_before_penalty'], color='red', zorder=5, label='score (before penalty)')
     plt.xticks(inds, labels, rotation=90)
     plt.ylabel('Contribution to priority score')
     plt.title('Top20 priority contributions')
