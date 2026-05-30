@@ -97,16 +97,12 @@ TESS_TOI_preprocessing_package/
   - `missing_penalty`：0.05 × (missing_feature_count / max_missing) 用于降低缺失过多样本的优先级。
 
 实现差异说明：
-
-- 你最初的建议（笔记中）使用了较简单的线性合成示例，例如 `0.6×planet_probability + 0.25×brightness + 0.15×short_period`（不包含 science interest）。
 - 当前代码实现把 `science_interest` 纳入了合成，并采用了不同的权重（默认在 `code/compute_priority.py` 中为 planet 0.5、science 0.2、brightness 0.15、period 0.1；`code/analyze_priority.py` 中也使用了类似的权重分解用于可视化）。
 
 如何修改权重：
 
 - 在 `code/compute_priority.py` 中，优先级合成在 `compute_scores` 函数和 `priority_score = ...` 处定义，直接修改相应系数即可。
 - 在 `code/analyze_priority.py` 中，用于绘图的贡献分解在 `w = {'planet':0.5, 'science':0.2, 'brightness':0.15, 'period':0.1}`（可按需修改以保持分析一致）。
-
-建议：如果希望采用你一开始的配比（例如把重点放在模型概率与观测可行性），可以将两处权重统一替换并重新运行 `analyze_priority.py`（先做 CV，再用 `compute_priority.py` 生成最终排序）。
 
 ## 5. 评估与可视化
 
