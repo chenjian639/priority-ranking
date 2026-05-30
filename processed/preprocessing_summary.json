@@ -1,0 +1,58 @@
+{
+  "input_file": "C:\\Users\\35512\\Desktop\\NASA_TESS_TOI_2026-05-28_FULL.csv",
+  "raw_copy": "C:\\Users\\35512\\Desktop\\TESS_TOI_preprocessing_package\\raw\\NASA_TESS_TOI_2026-05-28_FULL.csv",
+  "total_rows": 7931,
+  "total_columns": 91,
+  "selected_columns": [
+    "tid",
+    "toi",
+    "toidisplay",
+    "tfopwg_disp",
+    "disposition_group",
+    "pl_orbper",
+    "pl_rade",
+    "st_tmag",
+    "st_teff",
+    "st_rad",
+    "missing_feature_count",
+    "missing_feature_names",
+    "rowupdate",
+    "release_date"
+  ],
+  "feature_columns_used_for_missing_count": [
+    "pl_orbper",
+    "pl_rade",
+    "st_tmag",
+    "st_teff",
+    "st_rad"
+  ],
+  "missing_feature_count_definition": "Number of missing values across FEATURE_COLUMNS only; label and metadata fields are not counted.",
+  "label_counts_original": {
+    "PC": 4781,
+    "FP": 1243,
+    "CP": 732,
+    "KP": 591,
+    "APC": 481,
+    "FA": 100,
+    "NA": 3
+  },
+  "train_table_rows": 2666,
+  "train_positive_cp_kp_rows": 1323,
+  "train_negative_fp_fa_rows": 1343,
+  "candidate_pc_apc_rows": 5262,
+  "excluded_other_rows": 3,
+  "feature_missing_counts_in_selected_all": {
+    "pl_orbper": 106,
+    "pl_rade": 512,
+    "st_tmag": 0,
+    "st_teff": 167,
+    "st_rad": 526
+  },
+  "outputs": {
+    "selected_all_toi": "C:\\Users\\35512\\Desktop\\TESS_TOI_preprocessing_package\\processed\\selected_columns_all_toi.csv",
+    "train_modeling_table": "C:\\Users\\35512\\Desktop\\TESS_TOI_preprocessing_package\\processed\\train_modeling_table_cp_kp_vs_fp_fa.csv",
+    "candidate_pc_apc_for_prediction": "C:\\Users\\35512\\Desktop\\TESS_TOI_preprocessing_package\\processed\\candidate_pc_apc_for_risk_prediction.csv",
+    "excluded_other_labels": "C:\\Users\\35512\\Desktop\\TESS_TOI_preprocessing_package\\processed\\excluded_other_labels.csv",
+    "summary": "C:\\Users\\35512\\Desktop\\TESS_TOI_preprocessing_package\\processed\\preprocessing_summary.json"
+  }
+}

@@ -1,0 +1,21 @@
+tid,toi,toidisplay,tfopwg_disp,disposition_group,target_confirmed_planet,target_label_name,pl_orbper,pl_rade,st_tmag,st_teff,st_rad,missing_feature_count,missing_feature_names,rowupdate,release_date,planet_probability,priority_score
+1718201850,1351.01,TOI-1351.01,APC,candidate_for_prediction,,to_be_predicted_after_model_training,5.9294089,,10.3267,,,3,pl_rade;st_teff;st_rad,2025-07-23 16:00:01,2026-05-15 16:14:29,0.0,0.13730828575425708
+258738667,5950.01,TOI-5950.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,6.4389303,,10.447,,,3,pl_rade;st_teff;st_rad,2024-11-06 10:08:02,2026-05-15 16:14:29,0.0,0.13596365382978343
+463103749,3063.01,TOI-3063.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,1.9512921,,12.5954,,,3,pl_rade;st_teff;st_rad,2024-09-08 10:08:02,2026-05-15 16:14:29,0.0,0.11269483509118726
+214243287,4398.01,TOI-4398.01,APC,candidate_for_prediction,,to_be_predicted_after_model_training,5.7525195,,9.933,,,3,pl_rade;st_teff;st_rad,2024-04-16 12:02:52,2026-05-15 16:14:29,0.0,0.14162711601541256
+440186528,3760.01,TOI-3760.01,APC,candidate_for_prediction,,to_be_predicted_after_model_training,0.5318566,,13.0123,4852.0,,2,pl_rade;st_rad,2024-08-22 10:08:01,2026-05-15 16:14:29,0.0,0.12487621755069553
+242120884,1966.01,TOI-1966.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,0.6227257,6.3159749,9.0492,6390.7,2.30849,0,,2025-07-22 12:04:25,2026-05-15 16:14:29,0.0,0.2015816127258384
+439942982,6025.01,TOI-6025.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,1.0222806,8.97675,9.645701,8448.0,2.46,0,,2024-08-09 12:02:56,2026-05-15 16:14:29,0.0,0.1950308772400835
+199417958,7287.01,TOI-7287.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,3.9258703,,12.7478,,,3,pl_rade;st_teff;st_rad,2025-03-07 12:05:24,2026-05-15 16:14:29,0.0,0.11091857911759169
+80713983,2888.01,TOI-2888.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,4.218652,,11.1893,9307.0,,2,pl_rade;st_rad,2024-09-06 10:08:02,2026-05-15 16:14:29,0.0,0.14462734299850616
+195933415,7089.01,TOI-7089.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,1.5852089,5.77903,9.3672,11678.0,2.74,0,,2024-10-28 12:03:05,2026-05-15 16:14:29,0.0,0.19804828742406416
+22069559,4501.01,TOI-4501.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,2.0348789,3.57655,8.46837,8279.0,2.94,0,,2024-04-02 10:08:02,2026-05-15 16:14:29,0.0,0.20786182077052912
+367439938,6915.01,TOI-6915.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,2.4915545,5.46811,10.5681,8013.0,1.98,0,,2024-08-22 10:08:01,2026-05-15 16:14:29,0.0,0.18485449472864696
+31054498,2541.01,TOI-2541.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,1.4118418,8.14924,9.9048,7839.6,3.52,0,,2021-10-29 12:59:15,2026-05-15 16:14:29,0.0,0.19217363190481518
+400683848,4243.01,TOI-4243.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,1.0886286,8.7147619,10.7492,6127.0,4.2160501,0,,2025-12-11 16:00:01,2026-05-15 16:14:29,0.0,0.18294919106760218
+241076290,1560.01,TOI-1560.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,0.2580006,6.2776081,10.1942,9035.0,2.08687,0,,2023-02-24 10:10:01,2026-05-15 16:14:29,0.0,0.18906931049856945
+430406538,7108.01,TOI-7108.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,2.4425105,,13.0372,,,3,pl_rade;st_teff;st_rad,2024-10-28 12:03:05,2026-05-15 16:14:29,0.0,0.10783231466717651
+106626059,6416.01,TOI-6416.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,8.2330943,,13.097,,,3,pl_rade;st_teff;st_rad,2024-08-22 10:08:01,2026-05-15 16:14:29,0.0,0.10686047757155252
+121194926,3251.01,TOI-3251.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,2.0694143,,12.27,,,3,pl_rade;st_teff;st_rad,2024-08-22 10:08:01,2026-05-15 16:14:29,0.0,0.11624994009673888
+148273668,7669.01,TOI-7669.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,13.1852332,,13.081,,,3,pl_rade;st_teff;st_rad,2026-01-17 12:03:47,2026-05-15 16:14:29,0.0,0.106764234008118
+269231011,7128.01,TOI-7128.01,PC,candidate_for_prediction,,to_be_predicted_after_model_training,2.9650741,,12.8934,,,3,pl_rade;st_teff;st_rad,2026-05-07 12:03:59,2026-05-15 16:14:29,0.0,0.10937760331754616
